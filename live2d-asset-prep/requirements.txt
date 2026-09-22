@@ -1,0 +1,8 @@
+# Python dependencies for live2d-asset-prep scripts
+# - assemble_psd.py: Assembles transparent PNG layers into a structured PSD
+# - qa_check.py: Automated QA validation for PSD layers and source images
+
+numpy>=1.20.0
+Pillow>=9.0.0
+pytoshop>=1.2.0
+psd-tools>=1.9.0

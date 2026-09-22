@@ -1,0 +1,23 @@
+{
+  "skill_name": "orthographic-view-prompt-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我做一个蓝牙耳机充电盒的三视图，宽60mm高45mm深25mm，外壳是磨砂白色塑料，正面有一个LED指示灯和一个按键",
+      "expected_output": "A structured image-gen prompt (SUBJECT/DESIGN/GEOMETRY/etc) respecting 60x45x25mm proportions, white matte plastic, LED + button on front, plus plain-English layout note.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I want an orthographic three-view sheet for a minimalist mid-century wooden accent chair — no dimensions given, just make it look like a nice design piece.",
+      "expected_output": "A structured prompt with estimated/inferred dimensions clearly marked as estimated, mid-century wood details, plus layout note.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I only have a front-facing photo of this speaker (imagine a cylindrical speaker with a grille and one visible button on front). Can you generate the three-view orthographic sheet for it?",
+      "expected_output": "Should ask a short clarifying question about the unseen back/side geometry (or reasonably note it's inferring a plain cylindrical back) rather than inventing detailed hidden features, per the skill's conservative-inference rule.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill_name": "character-breakdown-sheet-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I designed an OC - a young female mage, red hooded cloak, silver staff with a blue gem, brown leather boots, dark hair in a braid. Can I get a breakdown sheet with turnaround and clothing layers?",
+      "expected_output": "Structured prompt with CHARACTER/BODY/FACE/HAIR/CLOTHING/ACCESSORIES/EQUIPMENT/TURNAROUND/BREAKDOWN(clothing layers)/PALETTE, no undressed depictions, plain-English layout note.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Here's a front-view illustration of my character (imagine: a knight with full plate armor, visor down, cape). Generate a full breakdown sheet with turnaround including the back view.",
+      "expected_output": "Should flag armor-back and cape-back as inferred/ask a short clarifying question if a meaningful design detail (e.g. emblem) is uncertain, rather than inventing confident detail.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a breakdown for a character with very long flowing multi-layered hair, several hair accessories, and layered fantasy armor over a tunic.",
+      "expected_output": "Should include a dedicated hair breakdown and clothing-layer breakdown given complexity, per Step 2 judgment, not skip them.",
+      "files": []
+    }
+  ]
+}
