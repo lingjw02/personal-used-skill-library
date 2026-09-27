@@ -21,6 +21,18 @@ This skill treats the character as **one fixed 3D identity**, locking key visual
 
 ---
 
+## ⚖️ Before & After Comparison
+
+| Factor | ❌ Before (Ad-Hoc Model Sheet Prompting) | ✅ After (With `character-breakdown-sheet-generator`) |
+|---|---|---|
+| **Multi-View Consistency** | Severe character drift: hair length, eye color, and costume details morph between front, side, and back views | Unified 3D identity lock: establishes rigid anchor points across all 3 views maintaining exact proportions |
+| **Layer Decomposition** | Flat illustration only; 3D modelers cannot see inner shirts, jacket lining colors, or hidden belts | Decomposed exploded garment callouts (outer coat, inner vest, footwear, and accessories isolated) |
+| **Anatomy & Safety** | Unwanted body exposure or altered body shapes when attempting to generate outfit layers | Respectful garment-only diagrams or neutral grey mannequin blocks preserving authentic volume |
+| **Unseen Angle Handling** | AI hallucinates wild, clashing details for the character's unreferenced back view | Certainty tagging (`Confirmed` vs `Inferred` vs `Unknown`) preventing contradictory hallucinations |
+| **Prompt Engineering** | Single paragraph prompt that mixes layout, pose, and style into a jumbled mess | Structured multi-block prompt (Subject DNA + Views + Exploded Callouts + Palette + Tuned Negatives) |
+
+---
+
 ## 🚀 Key Features
 
 - **Multi-Angle Turnaround**: Front, side, and back neutral standing views maintaining exact silhouette, proportions, and outfit details.

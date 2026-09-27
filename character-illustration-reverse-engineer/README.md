@@ -14,6 +14,18 @@
 
 ---
 
+## ⚖️ Before & After Comparison
+
+| Factor | ❌ Before (Ad-Hoc / Caption-Based Prompting) | ✅ After (With `character-illustration-reverse-engineer`) |
+|---|---|---|
+| **Character Identity** | Vague captioning ("girl with red hair in fantasy armor") produces generic strangers that drift across generations | Critical Identity List (Tier 1 locks: face structure, eye shape/pupil detail, hair bangs/parting, signature crests) |
+| **Costume Layering** | Model treats outfit as a single melted texture; cloaks fuse into tunics, belts disappear | 3-layer decomposition (inner tunic, structured breastplate, outer drape) specifying material weight and seams |
+| **Dynamic Re-Posing** | Changing poses changes the character's facial features and clothing palette completely | Decouples character DNA from camera/pose/lighting; keeps character 100% recognizable in any new dynamic scene |
+| **Lighting & Depth** | Flat, washed-out lighting or random glowing spots without light source logic | 5-point cinematic lighting rig (Key light, Fill light, Rim light, Ambient bounce, Practical accents) |
+| **Prompt Architecture** | Unstructured sentence fragments competing for model attention | 16-section standardized prompt placing load-bearing identity anchors in high-attention token windows |
+
+---
+
 ## 🔄 The 7-Stage Pipeline
 
 ```

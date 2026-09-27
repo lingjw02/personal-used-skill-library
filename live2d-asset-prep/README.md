@@ -22,6 +22,18 @@ Rigging an anime character requires strict organization: every eye layer, mouth 
 
 ---
 
+## ⚖️ Before & After Comparison
+
+| Factor | ❌ Before (Manual Layer Cutting / Ad-Hoc PSD) | ✅ After (With `live2d-asset-prep`) |
+|---|---|---|
+| **Layer Organization** | Flat unstructured PSD or random nested groups with arbitrary layer names (`Layer 4 copy 2`) | 40+ standardized nested layers following official Cubism naming conventions (`Hair_Front_Center`, `Eye_L_Iris`) |
+| **Occlusion & Gaps** | Tight cuts around visible parts leave hollow transparent holes whenever hair or limbs rotate | Strict occlusion fill margins: back elements extend 15–30px underneath front layers for gapless deforming |
+| **Rigging Parameter Mapping** | Rigger has to manually deduce which layer attaches to which physics deformer | Complete Cubism parameter blueprint (`ParamAngleX/Y/Z`, `ParamEyeLOpen`, `ParamMouthForm`, physics guides) |
+| **PSD Assembly & Testing** | Manual drag-and-drop of dozens of transparent PNGs prone to misalignment errors | Automated Python script assembly (`assemble_psd.py`) ensuring pixel-perfect canvas alignment |
+| **QA Verification** | Broken layers and clipped bounding boxes only discovered mid-way through Cubism rigging | Automated mechanical QA script (`qa_check.py`) validating layer integrity, alpha channels, and naming |
+
+---
+
 ## 🏗️ Layer Structure & Hierarchy
 
 Standardized naming follows the `Category_Subcategory_Side` format (e.g., `Hair_Front_Center`, `Eye_L_Iris`, `Clothing_Coat_Sleeve_R`).

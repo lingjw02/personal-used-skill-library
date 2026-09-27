@@ -12,6 +12,18 @@ $$\text{Character} + \text{Theme} + \text{Frame} + \text{Rarity} + \text{Depth} 
 
 ---
 
+## ⚖️ Before & After Comparison
+
+| Factor | ❌ Before (Standard Character Paste / Flat Card) | ✅ After (With `holosticker-2-5d-character-card`) |
+|---|---|---|
+| **Card Integration** | Flat rectangular character image awkwardly pasted inside a generic static frame border | 2.5D optical depth: character elements dynamically break the frame border (props, hair, weapons) |
+| **Frame Design** | One-size-fits-all generic border with mismatched colors and aesthetic clashes | Custom theme-aware frame engineering (Cyberpunk HUD, Gothic iron, Royal filigree, Aquatic caustics) |
+| **Foil & Collectibility** | Flat digital illustration with zero physical trading card feel | Multi-style holographic & foil effect engine (Rainbow Foil, Prism Holo, Stardust Sparkle, Glitch Foil) |
+| **Rarity Tiering** | Arbitrary visual complexity with no hierarchy | Scaled 4-tier rarity system (N, R, SR, SSR) scaling ornamentation, gold foil stamping, and particle density |
+| **Typography & Layout** | Text randomly covers character face or body without contrast or hierarchy | Lower-third information panel (≈30% baseline) with integrated character intro, rarity badge, and signature seal |
+
+---
+
 ## ✨ Key Features
 
 ### 1. 🌟 2.5D Layered Depth Illusion

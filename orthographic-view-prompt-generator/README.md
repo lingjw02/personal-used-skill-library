@@ -27,6 +27,18 @@ This skill models the object as **one unified 3D volume** in virtual space first
 
 ---
 
+## ⚖️ Before & After Comparison
+
+| Factor | ❌ Before (Ad-Hoc / Perspective Prompting) | ✅ After (With `orthographic-view-prompt-generator`) |
+|---|---|---|
+| **Projection Optics** | Artistic perspective distortion: vanishing points cause parallel edges to converge and measurements to distort | True parallel orthographic projection: zero vanishing points, affine-consistent dimensions across views |
+| **Component Alignment** | Components wander: a port on the bottom-right in the front view appears centered or absent in the side view | Coordinate-anchored datum lines: height and elevation lines strictly match between front, side, and top elevations |
+| **Volumetric Proportions** | Aspect ratio drift: an elongated rectangular chassis becomes square or cylindrical in the top view | Explicit bounding box calibration ($W \times H \times D$ dimensional ratios locked in prompt geometry) |
+| **Sheet Layout** | Cluttered overlapping angles, cinematic vignettes, and random artistic background scenery | Standard engineering 4-quadrant layout (Front, Side, Top, and optional 30° Isometric) on clean neutral drafting grid |
+| **CAD / 3D Handoff** | 3D modelers cannot use the reference without extensive manual correction and guessing | Directly usable as an image plane backdrop inside Blender, Maya, Fusion 360, or SolidWorks |
+
+---
+
 ## 📐 Structured Prompt Template
 
 ```text
