@@ -1,0 +1,239 @@
+{
+  "app": "Acme Admin (EXAMPLE - fictional)",
+  "env": "staging",
+  "tier": "B",
+  "created": "2026-10-01T04:33:15",
+  "notes_for_report": "Illustrative run; evidence files are placeholders, not real screenshots.",
+  "features": {
+    "F-001": {
+      "id": "F-001",
+      "module": "Auth",
+      "page": "Login",
+      "function": "Login",
+      "priority": "Critical",
+      "risk": "auth-security",
+      "destructive": false,
+      "related": [],
+      "state": "PASSED",
+      "note": "valid login lands on dashboard; session survives refresh",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "evidence/F-001-login-ok.txt"
+        }
+      ],
+      "bugs": [],
+      "confirmed_destructive": ""
+    },
+    "F-002": {
+      "id": "F-002",
+      "module": "Auth",
+      "page": "Login",
+      "function": "Logout ends session",
+      "priority": "Critical",
+      "risk": "auth-security",
+      "destructive": false,
+      "related": [],
+      "state": "PASSED",
+      "note": "logout then Back/direct URL redirects to login",
+      "evidence": [
+        {
+          "type": "obs",
+          "value": "after logout, GET /users redirected to /login (3/3)"
+        }
+      ],
+      "bugs": [],
+      "confirmed_destructive": ""
+    },
+    "F-003": {
+      "id": "F-003",
+      "module": "Users",
+      "page": "List",
+      "function": "Search users",
+      "priority": "High",
+      "risk": "search-filter",
+      "destructive": false,
+      "related": [
+        "F-005"
+      ],
+      "state": "FAILED",
+      "note": "accent search broken",
+      "evidence": [],
+      "bugs": [
+        "BUG-001"
+      ],
+      "confirmed_destructive": ""
+    },
+    "F-004": {
+      "id": "F-004",
+      "module": "Users",
+      "page": "Detail",
+      "function": "Edit user email",
+      "priority": "High",
+      "risk": "crud",
+      "destructive": false,
+      "related": [
+        "F-003"
+      ],
+      "state": "PASSED",
+      "note": "edit email saves, persists after refresh, appears in list and detail",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "evidence/F-004-retest.txt"
+        }
+      ],
+      "bugs": [],
+      "confirmed_destructive": ""
+    },
+    "F-005": {
+      "id": "F-005",
+      "module": "Users",
+      "page": "Create",
+      "function": "Create user",
+      "priority": "High",
+      "risk": "crud",
+      "destructive": false,
+      "related": [
+        "F-003"
+      ],
+      "state": "FAILED",
+      "note": "duplicate on double submit",
+      "evidence": [],
+      "bugs": [
+        "BUG-002"
+      ],
+      "confirmed_destructive": ""
+    },
+    "F-006": {
+      "id": "F-006",
+      "module": "Users",
+      "page": "List",
+      "function": "Bulk delete users",
+      "priority": "High",
+      "risk": "data-loss",
+      "destructive": true,
+      "related": [],
+      "state": "BLOCKED",
+      "note": "destructive; staging shared with other teams - waiting for permission to delete only QA-created users",
+      "evidence": [],
+      "bugs": [],
+      "confirmed_destructive": ""
+    },
+    "F-007": {
+      "id": "F-007",
+      "module": "Settings",
+      "page": "Profile",
+      "function": "Change theme",
+      "priority": "Low",
+      "risk": "cosmetic",
+      "destructive": false,
+      "related": [],
+      "state": "SKIPPED",
+      "note": "cosmetic; deprioritized behind untested data-loss feature",
+      "evidence": [],
+      "bugs": [],
+      "confirmed_destructive": ""
+    }
+  },
+  "bugs": {
+    "BUG-001": {
+      "title": "Search returns no rows for names with accents",
+      "features": [
+        "F-003"
+      ],
+      "severity": "High",
+      "confidence": "Confirmed",
+      "kind": "functional",
+      "category": "core-workflow",
+      "preconditions": [
+        "Regular user; user 'José' exists"
+      ],
+      "steps": [
+        "Open Users > List",
+        "Type 'José' in search, press Enter"
+      ],
+      "expected": "Row for José is listed",
+      "actual": "'No results' shown; 'Jose' (no accent) finds the row",
+      "repro": "3/3",
+      "suspected_area": "Search request encoding",
+      "suspected_basis": "network log shows the accent sent as '?'",
+      "recommendation": "Encode the query as UTF-8 before building the request URL",
+      "impl_area": "Users list search request builder (frontend)",
+      "risk": "Other callers of the same helper may rely on current encoding",
+      "verification": "Search 'José' returns the row; 'Jose' and 'jos' unchanged; add a regression test with an accented name",
+      "context": "GET /api/users?q=Jos%3F -> 200, body []",
+      "id": "BUG-001",
+      "status": "OPEN",
+      "created": "2026-10-01T04:33:16",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "evidence/F-003-accent-empty.txt"
+        },
+        {
+          "type": "file",
+          "value": "evidence/F-003-network.log"
+        }
+      ],
+      "history": []
+    },
+    "BUG-002": {
+      "title": "Double-click on Create user submits twice (duplicate user)",
+      "features": [
+        "F-005"
+      ],
+      "severity": "Medium",
+      "confidence": "Confirmed",
+      "kind": "functional",
+      "category": "core-workflow",
+      "preconditions": [],
+      "steps": [
+        "Open Users > Create",
+        "Fill valid data",
+        "Double-click Save"
+      ],
+      "expected": "One user created",
+      "actual": "Two identical users appear in the list",
+      "repro": "4/5",
+      "suspected_area": null,
+      "suspected_basis": null,
+      "recommendation": "Disable the Save button while the request is in flight and make creation idempotent server-side",
+      "impl_area": "Create user form submit handler; POST /api/users",
+      "risk": "Other forms may share the handler; confirm they still submit once",
+      "verification": "Double-click Save creates exactly one user; Enter-key double press likewise",
+      "context": null,
+      "id": "BUG-002",
+      "status": "FIXED_PENDING_RETEST",
+      "created": "2026-10-01T04:33:16",
+      "evidence": [
+        {
+          "type": "file",
+          "value": "evidence/F-005-save-twice.txt"
+        },
+        {
+          "type": "file",
+          "value": "evidence/F-005-list-dupes.txt"
+        }
+      ],
+      "history": [
+        {
+          "ts": "2026-10-01T04:33:16",
+          "event": "claimed fixed (UNVERIFIED)",
+          "note": "dev: commit 4f2a9c (example)"
+        }
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "NOTE-001",
+      "type": "feature-request",
+      "text": "Would like CSV export from the Users list",
+      "feature": "F-003",
+      "ts": "2026-10-01T04:33:16"
+    }
+  ],
+  "next_bug": 3,
+  "next_note": 2
+}

@@ -1,0 +1,2 @@
+<!-- Copy to qa-run/summary.md and replace. 3-8 plain sentences; numbers must match `qa_tracker.py status`. -->
+Tested <APP> (<version/commit>) in a <environment> environment using <capability tier: e.g. browser automation in Chrome 1xx>, as <roles tested>. <N> of <M> discovered features were executed (<P>%). <K> defects are open: <x Critical, y High, ...>. The most serious problems are <BUG-ids and one-line descriptions>. <What was NOT tested and why: roles, modules, browsers, data volumes, destructive actions not permitted.> <Any fixes claimed but not yet verified.>

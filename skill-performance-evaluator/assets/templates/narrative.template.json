@@ -1,0 +1,10 @@
+{
+  "inferences": [
+    {"text": "<reasoned interpretation of measured results>", "evidence": ["performance.json", "failures.json: f03"]}
+  ],
+  "uncertainties": ["<what the data cannot tell>"],
+  "limitations": ["<harness/sample/judge limits specific to this evaluation>"],
+  "recommendations": [
+    {"id": "R1", "text": "<specific change: file/section/sentence/script>", "evidence": ["<IDs and rates>"], "verification": "<which evals, how many runs, what to check>"}
+  ]
+}

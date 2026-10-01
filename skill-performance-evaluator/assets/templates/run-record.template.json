@@ -1,0 +1,19 @@
+{
+  "kind": "functional",
+  "eval_id": "f01",
+  "configuration": "with_skill",
+  "skill_version": "<version>",
+  "run": 1,
+  "prompt": "<exact prompt used>",
+  "model": "<model id>",
+  "execution_mode": "actual",
+  "status": "completed",
+  "assertions": [
+    {"text": "<assertion>", "passed": false, "method": "deterministic", "evidence": "<quoted output / command + result>"}
+  ],
+  "passed": null,
+  "artifacts_ok": null,
+  "metrics": {"duration_s": null, "tokens": null, "tool_calls": null, "errors": null},
+  "actual_summary": "<what happened, factual>",
+  "failure": {"category": "<taxonomy category or omit if passed>", "evidence": ["<evidence>"]}
+}

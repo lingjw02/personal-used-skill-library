@@ -1,0 +1,19 @@
+{"ts": "2026-10-01T04:33:15", "action": "init", "app": "Acme Admin (EXAMPLE - fictional)", "env": "staging", "tier": "B"}
+{"ts": "2026-10-01T04:33:15", "action": "add-feature", "id": "F-001", "function": "Login"}
+{"ts": "2026-10-01T04:33:15", "action": "add-feature", "id": "F-002", "function": "Logout ends session"}
+{"ts": "2026-10-01T04:33:15", "action": "add-feature", "id": "F-003", "function": "Search users"}
+{"ts": "2026-10-01T04:33:16", "action": "add-feature", "id": "F-004", "function": "Edit user email"}
+{"ts": "2026-10-01T04:33:16", "action": "add-feature", "id": "F-005", "function": "Create user"}
+{"ts": "2026-10-01T04:33:16", "action": "add-feature", "id": "F-006", "function": "Bulk delete users"}
+{"ts": "2026-10-01T04:33:16", "action": "add-feature", "id": "F-007", "function": "Change theme"}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-001", "old": "DISCOVERED", "new": "PASSED", "note": "valid login lands on dashboard; session survives refresh", "evidence": ["evidence/F-001-login-ok.txt"]}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-002", "old": "DISCOVERED", "new": "PASSED", "note": "logout then Back/direct URL redirects to login", "evidence": ["after logout, GET /users redirected to /login (3/3)"]}
+{"ts": "2026-10-01T04:33:16", "action": "add-bug", "id": "BUG-001", "title": "Search returns no rows for names with accents", "severity": "High", "confidence": "Confirmed"}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-003", "old": "DISCOVERED", "new": "FAILED", "note": "accent search broken", "evidence": []}
+{"ts": "2026-10-01T04:33:16", "action": "add-bug", "id": "BUG-002", "title": "Double-click on Create user submits twice (duplicate user)", "severity": "Medium", "confidence": "Confirmed"}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-005", "old": "DISCOVERED", "new": "FAILED", "note": "duplicate on double submit", "evidence": []}
+{"ts": "2026-10-01T04:33:16", "action": "mark-fixed", "id": "BUG-002", "note": "dev: commit 4f2a9c (example)"}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-004", "old": "DISCOVERED", "new": "PASSED", "note": "edit email saves, persists after refresh, appears in list and detail", "evidence": ["evidence/F-004-retest.txt"]}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-006", "old": "DISCOVERED", "new": "BLOCKED", "note": "destructive; staging shared with other teams - waiting for permission to delete only QA-created users", "evidence": []}
+{"ts": "2026-10-01T04:33:16", "action": "set", "id": "F-007", "old": "DISCOVERED", "new": "SKIPPED", "note": "cosmetic; deprioritized behind untested data-loss feature", "evidence": []}
+{"ts": "2026-10-01T04:33:16", "action": "note", "id": "NOTE-001", "type": "feature-request"}

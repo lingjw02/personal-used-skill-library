@@ -1,0 +1,27 @@
+{
+  "_note": "ILLUSTRATIVE ONLY: an example suite shape for a hypothetical CSV-summary skill. Not results, not a benchmark of any real skill.",
+  "skill_name": "csv-report-summarizer",
+  "suite_version": "1",
+  "evals": [
+    {"id": "f01", "kind": "functional", "category": "normal", "difficulty": "easy",
+     "prompt": "summarize sales.csv into a one-page markdown report with totals per region",
+     "expected_behavior": "report.md with a totals table per region matching the data",
+     "assertions": [
+       {"text": "report.md exists", "method": "artifact", "check": "test -f report.md", "origin": "stated"},
+       {"text": "North total equals 1234.50", "method": "deterministic", "check": "grep -q '1234.50' report.md", "origin": "inferred"}],
+     "input_files": ["evals/files/sales.csv"], "expected_artifacts": ["report.md"], "positive_or_negative": "positive", "tags": ["happy-path"]},
+    {"id": "f02", "kind": "functional", "category": "edge", "difficulty": "hard",
+     "prompt": "this csv uses ; as separator and 1.234,50 style numbers - same report please",
+     "expected_behavior": "detects delimiter and decimal comma; totals correct",
+     "assertions": [{"text": "North total equals 1234.50", "method": "deterministic", "check": "grep -q '1234.50' report.md", "origin": "inferred"}],
+     "input_files": ["evals/files/sales_eu.csv"], "expected_artifacts": ["report.md"], "positive_or_negative": "positive", "tags": ["locale"]},
+    {"id": "f03", "kind": "functional", "category": "invalid-input", "difficulty": "medium",
+     "prompt": "summarize empty.csv",
+     "expected_behavior": "clear message that the file has no data rows; no fabricated numbers",
+     "assertions": [{"text": "output states the file is empty and contains no invented totals", "method": "rubric", "origin": "stated"}],
+     "input_files": ["evals/files/empty.csv"], "positive_or_negative": "positive", "tags": ["error-handling"]},
+    {"id": "t01", "kind": "trigger", "category": "direct", "prompt": "can you turn this spreadsheet export into a summary report", "expected_trigger": true, "positive_or_negative": "positive"},
+    {"id": "t02", "kind": "trigger", "category": "near-miss", "prompt": "explain how CSV quoting works", "expected_trigger": false, "positive_or_negative": "negative"},
+    {"id": "t03", "kind": "trigger", "category": "near-miss", "prompt": "convert this csv to json", "expected_trigger": false, "positive_or_negative": "negative"}
+  ]
+}

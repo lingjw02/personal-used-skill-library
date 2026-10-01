@@ -1,38 +1,116 @@
-# 🎨 Personal AI Agent Skills Library & Visual Production Suite
+# ⚡ Full-Stack AI Agent Skills & Creative Production Suite
 
-[![Antigravity Compatible](https://img.shields.io/badge/Antigravity-Skills-4285F4?logo=google&logoColor=white)](https://github.com/lingjw02/personal-used-skill-library)
+[![Antigravity Compatible](https://img.shields.io/badge/Antigravity-Skills%20Library-4285F4?logo=google&logoColor=white)](https://github.com/lingjw02/personal-used-skill-library)
 [![Claude Compatible](https://img.shields.io/badge/Claude-Code%20%26%20Desktop-D97757?logo=anthropic&logoColor=white)](https://github.com/lingjw02/personal-used-skill-library)
+[![Cursor & Codex](https://img.shields.io/badge/Cursor%20%26%20Codex-Ready-000000?logo=visualstudiocode&logoColor=white)](https://github.com/lingjw02/personal-used-skill-library)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-lingjw02%2Fpersonal--used--skill--library-181717?logo=github&logoColor=white)](https://github.com/lingjw02/personal-used-skill-library)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A curated suite of specialized **AI Agent Skills** and structured prompt engineering systems designed for anime character illustration, concept art decompilation, Live2D Cubism rigging preparation, collectible trading cards, precision 3D orthographic technical sheets, UI/UX motion design, brand identity, and automated QA verification.
+A curated suite of specialized **AI Agent Skills** designed for autonomous execution across two core domains:
 
-Compatible with **Google Antigravity**, **Claude Code**, **Claude Desktop**, **Cursor**, and leading image generation platforms (**Midjourney**, **Flux**, **Stable Diffusion**, **DALL-E 3**).
+1. **Software Architecture, Engineering & Autonomous QA:** Dependency-aware phase planning (`.planning/`), live functional system testing, interactive UI/UX and accessibility auditing, empirical agent skill benchmarking, three-level factual verification, and senior motion & documentation design.
+2. **Creative Concept Art & Visual Asset Production:** High-fidelity character decompilation, 2.5D collectible cards, CAD-precision orthographic 3-view blueprints, Live2D Cubism rigging preparation, brand logo identity, and anime wallpaper prompt synthesis.
+
+Fully compatible with **Google Antigravity (AGY)**, **Claude Code**, **Claude Desktop**, **Cursor**, **Gemini CLI**, and leading generative models (**Midjourney**, **Flux**, **Stable Diffusion**, **DALL-E 3**).
+
+---
+
+## 📑 Quick Navigation
+
+- [🧭 Skills Catalog](#-skills-catalog)
+  - [1. Software Architecture, Planning & Engineering](#1-software-architecture-planning--engineering)
+  - [2. System Quality Assurance, UI/UX & Evaluation](#2-system-quality-assurance-uiux--evaluation)
+  - [3. Frontend, Motion & Documentation Design](#3-frontend-motion--documentation-design)
+  - [4. Creative Concept Art & Character Production](#4-creative-concept-art--character-production)
+- [🔄 Workflows & Production Pipelines](#-workflows--production-pipelines)
+  - [Software Engineering & Autonomous QA Pipeline](#a-software-engineering--autonomous-qa-pipeline)
+  - [Character & Visual Production Pipeline](#b-character--visual-production-pipeline)
+- [📂 Repository Structure](#-repository-structure)
+- [🚀 Installation & Usage](#-installation--usage)
+- [📦 Prepackaged .skill Archives](#option-3-prepackaged-skill-archives)
+- [📄 License](#-license)
 
 ---
 
 ## 🧭 Skills Catalog
 
+### 1. Software Architecture, Planning & Engineering
+
 | Skill Folder | Description | Primary Deliverables | Target Tools & Workflows |
 |---|---|---|---|
-| [**`anime-wallpaper-prompt-design`**](./anime-wallpaper-prompt-design/) | Anime character wallpaper & illustration prompt engineering (NovelAI, SDXL, FLUX, Midjourney Niji) with safe zones. | Tuned prompt + Danbooru tags + parameters + safe-zone composition plan | NovelAI, SDXL/ComfyUI, Flux, Midjourney Niji, Mobile/Desktop Wallpaper |
-| [**`character-breakdown-sheet-generator`**](./character-breakdown-sheet-generator/) | Generates character model sheets, turnaround views (front/side/back), and decomposed layer callouts. | Structured prompt + layout plan + consistency controls | Midjourney, SDXL, Flux, 3D Modeler handoff |
-| [**`character-illustration-reverse-engineer`**](./character-illustration-reverse-engineer/) | Deconstructs character artwork into design specs and high-fidelity generation prompts preserving character DNA. | 16-section generation prompt + Critical Identity List | Midjourney v6, SD/Pony, Flux, Concept Art |
-| [**`character-reference-sheet`**](./character-reference-sheet/) | Generates clean, reusable character reference sheets from source art to maintain visual consistency for fan art & outfits. | Identity-extracted prompt + silhouette & turnaround guide | Midjourney, SD/Pony, Flux, Concept Art, Model Sheets |
-| [**`frontend-motion-icon-design`**](./frontend-motion-icon-design/) | Senior UI/UX motion design, micro-interactions, loading states, and accessible icon systems (WCAG). | Motion guidelines + SVG/icon systems + framework code | Web, React, Vue, CSS, Lottie, UI/UX Design |
-| [**`holosticker-2-5d-character-card`**](./holosticker-2-5d-character-card/) | Transforms character art into luxury 2.5D collectible cards (HoloSticker) with theme-aware frames & foil effects. | 2.5D layered design + theme frame + rarity tier (N/R/SR/SSR) | Photoshop, Stable Diffusion, Game UI, Collectibles |
-| [**`image-restoration-skill`**](./image-restoration-skill/) | Restores, denoises, deblurs, removes artifacts, and upscales damaged/low-resolution images into HD. | Restoration prompt + defect analysis + HD reconstruction | SD/Flux, Upscalers, Photo & Anime Restoration |
-| [**`independent-verification-review`**](./independent-verification-review/) | Three-level independent verification & factual audit protocol (evidence, logic, risk assessment). | Multi-tier review checklist + fact verification report | Quality Assurance, Research, Content Review |
-| [**`live2d-asset-prep`**](./live2d-asset-prep/) | Prepares character art for Live2D Cubism rigging: generates layer hierarchies, parameter maps, and assembles PSDs. | Layer blueprint + rigging spec + assembled PSD & QA report | Live2D Cubism, VTubers, Photoshop, Spine |
-| [**`logo-identity-designer`**](./logo-identity-designer/) | Complete brand identity design workflow (intake, creative strategy, 3+ concepts, scoring, vector production delivery). | Logo strategy + evaluation scoring + lockups & brand vector delivery spec | Illustrator, SVG, Vector Design, Brand Systems, UI/UX |
-| [**`orthographic-view-prompt-generator`**](./orthographic-view-prompt-generator/) | Generates mathematically consistent prompts for CAD-style 3D three-view drawings (front/side/top/isometric). | True orthographic multi-view prompt with dimensions | Midjourney, CAD, 3D Modeling, Product Design |
-| [**`readme-writer`**](./readme-writer/) | Generates structured, high-accuracy README and documentation pages tailored to actual project manifests and codebases. | Clean Markdown/MDX documentation + installation guides + usage examples | GitHub, Markdown, Documentation, Open Source Projects |
+| [**`ai-project-architect`**](./ai-project-architect/) | Decomposes complex specs or codebases into dependency-aware, atomic phase blueprints (`.planning/`) that coding agents can execute autonomously. | Phased roadmap + atomic task specs + DAG dependency graph + automated validation commands | Antigravity, Claude Code, Cursor, Codex, Full-Stack Architecture |
 
 ---
 
-## 🔄 End-to-End Character Production Pipeline
+### 2. System Quality Assurance, UI/UX & Evaluation
 
-These skills can be used independently or chained together into an end-to-end creative workflow:
+| Skill Folder | Description | Primary Deliverables | Target Tools & Workflows |
+|---|---|---|---|
+| [**`ui-ux-tester`**](./ui-ux-tester/) | Autonomous UI/UX auditing of running interfaces via keyboard, mouse, and viewport resizing (1920/1440/768/375px) with WCAG contrast calculations. | Evidence-based UI/UX audit report + Design Consistency Matrix + concrete CSS/component fixes | Web Apps, Dashboards, Playwright, Chrome DevTools, Usability QA |
+| [**`software-qa-tester`**](./software-qa-tester/) | Operates and tests running applications like a human QA engineer with real clicks, inputs, network logs, and immutable audit state tracking. | Verifiable bug reproduction records + state tracker logs + developer fix recommendations | Web Apps, CLI, APIs, Desktop Apps, Regression Retesting |
+| [**`skill-performance-evaluator`**](./skill-performance-evaluator/) | Benchmarks and evaluates AI Agent Skills with empirical evidence (trigger precision/recall, baseline lift, flakiness, version regression diffs). | Quantitative scorecard + baseline comparison report + automated regression metrics | Agent Skill Developers, Evals, CI/CD Skill Benchmarks |
+| [**`independent-verification-review`**](./independent-verification-review/) | Three-level adversarial audit protocol (Facts & Sources → Logic & Deductions → Risk & Adversarial Assessment) eliminating AI hallucinations. | Multi-tier review checklist + factual verification report + epistemic confidence scores | Research, Content Review, Critical Architecture Auditing |
+
+---
+
+### 3. Frontend, Motion & Documentation Design
+
+| Skill Folder | Description | Primary Deliverables | Target Tools & Workflows |
+|---|---|---|---|
+| [**`frontend-motion-icon-design`**](./frontend-motion-icon-design/) | Senior UI/UX motion design, micro-interactions, loading states, and accessible icon systems (WCAG 2.2 AA). | GPU-accelerated motion guidelines + accessible SVG icon tokens + framework code | Web, React, Vue, CSS, Lottie, Design Systems |
+| [**`logo-identity-designer`**](./logo-identity-designer/) | Complete brand identity workflow (intake, creative strategy, 3+ concepts, scoring, vector production delivery). | Logo strategy + evaluation scoring + lockups & brand vector delivery specs | Illustrator, SVG, Vector Design, Brand Systems, UI/UX |
+| [**`readme-writer`**](./readme-writer/) | Generates high-accuracy, beautifully structured README and documentation pages tailored to real project codebases. | Clean Markdown/MDX documentation + installation guides + usage examples | GitHub, Markdown, Documentation, Open Source Projects |
+
+---
+
+### 4. Creative Concept Art & Character Production
+
+| Skill Folder | Description | Primary Deliverables | Target Tools & Workflows |
+|---|---|---|---|
+| [**`anime-wallpaper-prompt-design`**](./anime-wallpaper-prompt-design/) | Anime character wallpaper & illustration prompt engineering (NovelAI, SDXL, FLUX, Midjourney Niji) with safe zones. | Tuned prompt + Danbooru tags + parameters + safe-zone composition plan | NovelAI, SDXL/ComfyUI, Flux, Midjourney Niji, Wallpapers |
+| [**`character-breakdown-sheet-generator`**](./character-breakdown-sheet-generator/) | Generates character model sheets, turnaround views (front/side/back), and decomposed layer callouts. | Structured prompt + layout plan + consistency controls | Midjourney, SDXL, Flux, 3D Modeler handoff |
+| [**`character-illustration-reverse-engineer`**](./character-illustration-reverse-engineer/) | Deconstructs character artwork into design specs and high-fidelity generation prompts preserving character DNA. | 16-section generation prompt + Critical Identity List | Midjourney v6, SD/Pony, Flux, Concept Art |
+| [**`character-reference-sheet`**](./character-reference-sheet/) | Generates clean, reusable character reference sheets from source art to maintain visual consistency for fan art & outfits. | Identity-extracted prompt + silhouette & turnaround guide | Midjourney, SD/Pony, Flux, Concept Art, Model Sheets |
+| [**`holosticker-2-5d-character-card`**](./holosticker-2-5d-character-card/) | Transforms character art into luxury 2.5D collectible cards (HoloSticker) with theme-aware frames & foil effects. | 2.5D layered design + theme frame + rarity tier (N/R/SR/SSR) | Photoshop, Stable Diffusion, Game UI, Collectibles |
+| [**`image-restoration-skill`**](./image-restoration-skill/) | Restores, denoises, deblurs, removes artifacts, and upscales damaged/low-resolution images into HD. | Restoration prompt + defect analysis + HD reconstruction | SD/Flux, Upscalers, Photo & Anime Restoration |
+| [**`live2d-asset-prep`**](./live2d-asset-prep/) | Prepares character art for Live2D Cubism rigging: generates layer hierarchies, parameter maps, and assembles PSDs. | Layer blueprint + rigging spec + assembled PSD & QA report | Live2D Cubism, VTubers, Photoshop, Spine |
+| [**`orthographic-view-prompt-generator`**](./orthographic-view-prompt-generator/) | Generates mathematically consistent prompts for CAD-style 3D three-view drawings (front/side/top/isometric). | True orthographic multi-view prompt with dimensions | Midjourney, CAD, 3D Modeling, Product Design |
+
+---
+
+## 🔄 Workflows & Production Pipelines
+
+### A. Software Engineering & Autonomous QA Pipeline
+
+Chain the architecture, testing, and evaluation skills for end-to-end software development:
+
+```mermaid
+flowchart TD
+    A[Product Spec / User Request] --> B[ai-project-architect]
+    B -->|Phased .planning/ Blueprint & Validation Commands| C[Coding Agent Implementation]
+    
+    C --> D[software-qa-tester]
+    C --> E[ui-ux-tester]
+    
+    D -->|Bug Isolation, Network Logs & Retest| F{Functional Pass?}
+    E -->|Viewport Resizing, Contrast & Consistency Matrix| G{UI/UX Pass?}
+    
+    F -- Issues Found --> C
+    G -- Issues Found --> C
+    
+    F -- Passed --> H[independent-verification-review]
+    G -- Passed --> H
+    
+    H -->|Factual & Logic Audit Verification| I[readme-writer]
+    I -->|Polished Documentation & Release Notes| J[Production Release]
+    
+    K[New or Updated Agent Skill] --> L[skill-performance-evaluator]
+    L -->|Benchmark Scorecard & Regression Diff| M[Validated Skill Package]
+```
+
+### B. Character & Visual Production Pipeline
+
+Chain the creative skills for complete 2D/3D character asset production:
 
 ```mermaid
 flowchart TD
@@ -58,38 +136,46 @@ flowchart TD
 
 ```
 Skills/
-├── character-breakdown-sheet-generator/
-│   ├── SKILL.md                          # Agent skill specification
-│   ├── README.md                         # Detailed documentation & prompt template
-│   └── evals_evals.json                  # Test cases and evaluation criteria
+├── ai-project-architect/                 # Phase planning, task decomposition & .planning/ blueprint
+│   ├── SKILL.md                          # Skill specification
+│   ├── README.md                         # Architecture methodology & guides
+│   ├── scripts/                          # init_plan.py, validate_plan.py
+│   └── references/                       # Architecture, phases, requirements, quality gates
 │
-├── character-illustration-reverse-engineer/
-│   ├── SKILL.md                          # Agent skill specification
-│   ├── README.md                         # 7-stage pipeline & 4-tier system
-│   ├── workflows/                        # Specialized workflow step guides
-│   ├── templates/                        # Profile, 16-section prompt & negative prompt
-│   └── examples/                         # Worked examples (anime, fantasy, full-body)
+├── anime-wallpaper-prompt-design/        # High-res anime wallpaper & safe-zone prompt engineering
+├── character-breakdown-sheet-generator/  # Turnaround views, model sheets & layer callouts
+├── character-illustration-reverse-engineer/ # 16-section art deconstruction & prompt synthesis
+├── character-reference-sheet/            # Reusable character turnarounds & visual identity lock
+├── frontend-motion-icon-design/          # UI/UX micro-interactions, CSS motion & accessible icons
+├── holosticker-2-5d-character-card/      # 2.5D collectible card frames & foil effects
+├── image-restoration-skill/              # Upscaling, deblurring & defect restoration
+├── independent-verification-review/      # 3-level factual, logical & risk verification protocol
+├── live2d-asset-prep/                    # Layer hierarchy blueprints & automated PSD assembly
+├── logo-identity-designer/               # Multi-concept brand identity & vector delivery specs
+├── orthographic-view-prompt-generator/   # CAD-dimensioned multi-view orthographic prompts
+├── readme-writer/                        # Accurate documentation & Markdown README engineering
 │
-├── holosticker-2-5d-character-card/
-│   ├── SKILL.md                          # Agent skill specification (v2.1)
-│   ├── README.md                         # 2.5D layer stack, frame themes & foil effects
-│   └── assets/
-│       └── sample-character.jpg          # Sample input character
+├── skill-performance-evaluator/          # Empirical testing, trigger metrics & regression diffs
+│   ├── SKILL.md                          # Skill specification
+│   ├── README.md                         # Evaluation framework guide
+│   ├── scripts/                          # validate_structure.py, trigger_metrics.py, compare_versions.py
+│   └── references/                       # Metrics, test design, failure modes, regression schemas
 │
-├── live2d-asset-prep/
-│   ├── SKILL.md                          # Agent skill specification
-│   ├── README.md                         # Rigging blueprint & QA guide
-│   ├── requirements.txt                  # Python dependencies
-│   ├── scripts/                          # Automated PSD assembly & QA testing
-│   └── references/                       # Layer hierarchies, parameters & checklists
+├── software-qa-tester/                   # Human-like QA testing, live bug filing & retesting
+│   ├── SKILL.md                          # Skill specification
+│   ├── README.md                         # QA execution protocol
+│   ├── scripts/                          # qa_tracker.py state machine
+│   └── references/                       # Discovery, evidence, bugs, safety & retest guides
 │
-├── orthographic-view-prompt-generator/
-│   ├── SKILL.md                          # Agent skill specification
-│   ├── README.md                         # CAD projection rules & template
-│   └── evals_evals.json                  # Test cases and evaluation scenarios
+├── ui-ux-tester/                         # Autonomous UI/UX auditing, viewport resizing & a11y
+│   ├── SKILL.md                          # Skill specification
+│   ├── README.md                         # UI/UX testing methodology
+│   ├── scripts/                          # contrast.py (WCAG luminance & contrast ratio)
+│   └── references/                       # Checklists, measurement snippets, report template
 │
-├── packages/                             # Pre-packaged .skill zip archives & consolidated bundle
-│   ├── all-skills.zip
+├── packages/                             # Standalone .skill zip packages for all 16 skills
+│   ├── all-skills.zip                    # Consolidated bundle of all skills
+│   ├── ai-project-architect.skill
 │   ├── anime-wallpaper-prompt-design.skill
 │   ├── character-breakdown-sheet-generator.skill
 │   ├── character-illustration-reverse-engineer.skill
@@ -101,7 +187,10 @@ Skills/
 │   ├── live2d-asset-prep.skill
 │   ├── logo-identity-designer.skill
 │   ├── orthographic-view-prompt-generator.skill
-│   └── readme-writer.skill
+│   ├── readme-writer.skill
+│   ├── skill-performance-evaluator.skill
+│   ├── software-qa-tester.skill
+│   └── ui-ux-tester.skill
 │
 ├── .gitignore
 ├── LICENSE
@@ -114,44 +203,51 @@ Skills/
 
 ### Option 1: Using with Google Antigravity (AGY)
 To use any skill in your Antigravity workflows:
-1. Copy the desired skill folder (e.g. `character-breakdown-sheet-generator/`) to your project's skills directory:
+1. Copy the desired skill folder (e.g. `ui-ux-tester/` or `ai-project-architect/`) to your project's skills directory:
    ```bash
    # Workspace-level skills
    mkdir -p .agent/skills
-   cp -r character-breakdown-sheet-generator .agent/skills/
+   cp -r ui-ux-tester .agent/skills/
    ```
-   Or into the global skills directory:
+   Or install globally for all projects:
    ```bash
    # Global skills
-   cp -r character-breakdown-sheet-generator ~/.gemini/antigravity-cli/builtin/skills/
+   cp -r ui-ux-tester ~/.gemini/antigravity-cli/builtin/skills/
    ```
-2. The skill is automatically discovered and indexed by the agent.
+2. The skill is automatically indexed and discovered by the agent during conversation.
 
-### Option 2: Using with Claude Code / Claude Desktop
+### Option 2: Using with Claude Code / Claude Desktop / Cursor
 1. Clone this repository or copy individual skill folders to your `.claude/skills` directory:
    ```bash
    mkdir -p ~/.claude/skills
-   cp -r character-illustration-reverse-engineer ~/.claude/skills/
+   cp -r software-qa-tester ~/.claude/skills/
+   cp -r ui-ux-tester ~/.claude/skills/
    ```
-2. In chat, activate by uploading an image or asking relevant queries (e.g. *"Break down this character's outfit"* or *"Turn this illustration into a 3-view CAD drawing"*).
+2. In chat, activate naturally by prompting the agent (e.g. *"Audit our dashboard UI at 375px viewport"* or *"Plan out this feature in .planning/"*).
 
 ### Option 3: Prepackaged `.skill` Archives
-If your platform accepts `.skill` package uploads directly, download the ready-to-use zip packages from the [`packages/`](./packages/) directory:
-- [`anime-wallpaper-prompt-design.skill`](./packages/anime-wallpaper-prompt-design.skill)
-- [`character-breakdown-sheet-generator.skill`](./packages/character-breakdown-sheet-generator.skill)
-- [`character-illustration-reverse-engineer.skill`](./packages/character-illustration-reverse-engineer.skill)
-- [`character-reference-sheet.skill`](./packages/character-reference-sheet.skill)
-- [`frontend-motion-icon-design.skill`](./packages/frontend-motion-icon-design.skill)
-- [`holosticker-2-5d-character-card.skill`](./packages/holosticker-2-5d-character-card.skill)
-- [`image-restoration-skill.skill`](./packages/image-restoration-skill.skill)
-- [`independent-verification-review.skill`](./packages/independent-verification-review.skill)
-- [`live2d-asset-prep.skill`](./packages/live2d-asset-prep.skill)
-- [`logo-identity-designer.skill`](./packages/logo-identity-designer.skill)
-- [`orthographic-view-prompt-generator.skill`](./packages/orthographic-view-prompt-generator.skill)
-- [`readme-writer.skill`](./packages/readme-writer.skill)
+If your agent environment accepts `.skill` package uploads directly, download the ready-to-use zip packages from the [`packages/`](./packages/) directory:
+
+- 🏗️ [`ai-project-architect.skill`](./packages/ai-project-architect.skill)
+- 🎯 [`ui-ux-tester.skill`](./packages/ui-ux-tester.skill)
+- 🧪 [`software-qa-tester.skill`](./packages/software-qa-tester.skill)
+- 📊 [`skill-performance-evaluator.skill`](./packages/skill-performance-evaluator.skill)
+- 🛡️ [`independent-verification-review.skill`](./packages/independent-verification-review.skill)
+- ⚡ [`frontend-motion-icon-design.skill`](./packages/frontend-motion-icon-design.skill)
+- 📝 [`readme-writer.skill`](./packages/readme-writer.skill)
+- 🎨 [`anime-wallpaper-prompt-design.skill`](./packages/anime-wallpaper-prompt-design.skill)
+- 📐 [`character-breakdown-sheet-generator.skill`](./packages/character-breakdown-sheet-generator.skill)
+- 🔍 [`character-illustration-reverse-engineer.skill`](./packages/character-illustration-reverse-engineer.skill)
+- 📋 [`character-reference-sheet.skill`](./packages/character-reference-sheet.skill)
+- 🎴 [`holosticker-2-5d-character-card.skill`](./packages/holosticker-2-5d-character-card.skill)
+- 🛠️ [`image-restoration-skill.skill`](./packages/image-restoration-skill.skill)
+- 🎭 [`live2d-asset-prep.skill`](./packages/live2d-asset-prep.skill)
+- 🏷️ [`logo-identity-designer.skill`](./packages/logo-identity-designer.skill)
+- 📐 [`orthographic-view-prompt-generator.skill`](./packages/orthographic-view-prompt-generator.skill)
 
 ### Option 4: Standalone / Manual Prompting
-All skills contain ready-to-copy prompt structures in their respective `README.md` files that can be pasted directly into:
+All skills contain ready-to-copy prompt structures and reference guides in their respective folders that can be utilized directly in:
+- **Claude / Antigravity / Cursor / ChatGPT**
 - **Midjourney** (v6+ recommended)
 - **Flux.1** (Dev / Schnell)
 - **Stable Diffusion WebUI / ComfyUI**

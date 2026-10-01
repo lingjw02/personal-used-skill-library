@@ -1,0 +1,11 @@
+{
+  "overview": "<author-written overview, or omit to use SKILL.md description>",
+  "why_exists": "<author-written>",
+  "features": ["<feature as documented by the author>"],
+  "usage": "<markdown>",
+  "configuration": "<markdown>",
+  "example": "<markdown>",
+  "requirements": ["<requirement>"],
+  "troubleshooting": "<markdown>",
+  "license": "<license text or reference>"
+}

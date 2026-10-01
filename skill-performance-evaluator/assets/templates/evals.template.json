@@ -1,0 +1,21 @@
+{
+  "skill_name": "<target-skill-name>",
+  "suite_version": "1",
+  "evals": [
+    {
+      "id": "f01", "kind": "functional", "category": "normal", "difficulty": "easy",
+      "prompt": "<realistic user prompt>",
+      "expected_behavior": "<what a correct outcome looks like>",
+      "assertions": [
+        {"text": "<verifiable statement>", "method": "deterministic", "check": "<command or regex>", "origin": "stated"}
+      ],
+      "input_files": [], "expected_artifacts": [],
+      "positive_or_negative": "positive", "tags": []
+    },
+    {
+      "id": "t01", "kind": "trigger", "category": "near-miss",
+      "prompt": "<prompt that shares keywords but should NOT trigger>",
+      "expected_trigger": false, "positive_or_negative": "negative"
+    }
+  ]
+}
